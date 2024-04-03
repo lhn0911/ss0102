@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = [
+            {
+                userName:"nguyenvana",
+                password:"12345",
+            },
+            {
+                userName:"nguyenvanb",
+                password:"12345",
+            },
+            {
+                userName:"nguyenvanc",
+                password:"1 2345",
+            },
+            {
+                userName:"nguyenvand",
+                password:"123 45",
+            },
+            
+        ]
+        let ktra = false;
+        user.forEach((item,index,arr)=>{
+            if(item.password.includes(" ")){
+                console.log("vị trí "+index);
+                ktra = true;
+                return true;
+
+            }
+        });
+        if(!ktra){
+            console.log("mọi tài khoản hợp lệ")}
+    </script>
+</body>
+</html>

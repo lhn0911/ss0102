@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Arrays</title>
+</head>
+<body>
+    <script>
+        let arrnum1 = [1, 2, '1', 3, 'a'];
+        let arrnum2 = [1, 2, 3, 4];
+        let arrnum = [];
+
+        arrnum1.forEach(item => {
+            if (!arrnum2.includes(item)) {
+                arrnum.push(item);
+            }
+        });
+
+        arrnum1 = arrnum1.filter(item => arrnum2.includes(item));
+
+        console.log(arrnum);
+        console.log(arrnum1);
+    </script>
+</body>
+</html>

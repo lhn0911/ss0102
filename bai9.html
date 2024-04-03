@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Hobbies</title>
+</head>
+<body>
+    <script>
+        let users = [
+            { id: 1, name: 'Alice', hobbies: ['Reading', 'Drawing'] },
+            { id: 2, name: 'Bob', hobbies: ['Gaming', 'Cooking', 'Reading'] }
+        ];
+        let Hobbies = [];
+        users.forEach(user => {
+            user.hobbies.forEach(hobby => {
+                if (!Hobbies.includes(hobby)) {
+                    Hobbies.push(hobby);
+                }
+            });
+        });
+        
+        console.log(Hobbies);
+    </script>
+</body>
+</html>
